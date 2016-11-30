@@ -5,27 +5,19 @@
 \usepackage{helvet}
 \usepackage{eso-pic,graphicx}
 \usepackage[top=2cm, bottom=2cm, outer=1cm, inner=1cm]{geometry}
-%\setcounter{secnumdepth}{0}
-%\usepackage[percent]{overpic}
-%\usepackage{fancyhdr}
-%\usepackage{color}
-%\usepackage{multirow}
-%\usepackage{geometry}
-
-%\usepackage{textcomp}
-%\usepackage{tcolorbox}
 \usepackage{tikz}
 \usetikzlibrary{positioning,shapes,shadows,arrows}
-%\usepackage{sectsty}
 
 \newcommand{\showmap}[1]{
 	\begin{center}
-		\includegraphics[width=\paperwidth]{#1}
+		\includegraphics[width=\linewidth]{#1}
 	\end{center}
 }
 	
 \begin{document}
-\AddToShipoutPictureBG{\includegraphics[width=\paperwidth,height=\paperheight]{images/vintage-vignette-tan-paper-texture-2}};
+\AddToShipoutPictureBG{
+	\includegraphics[width=\paperwidth,height=\paperheight]{images/vintage-vignette-tan-paper-texture-2}
+}
 
 \pagenumbering{gobble}
 
@@ -37,25 +29,23 @@
 
 \pagenumbering{arabic}
 
-\chapter{Intro}
+\chapter{Preambul}
+
+O delegatie din Silvermoon catre Waterdeep s-a pierdut pe undeva prin zona si Lords Alliance vrea sa afle de ce si ce si cum si etc. 
+Gheorghe, membru fruntas al Lords Alliance, a inceput sa investigheze ajutat de sensibila Ella Menstu si inteleptul Cezar.
+
+Componenta echipei de delegati:
+Teresiel - moon elf din Silverymoon
+Rhundorth - shield dwarf din Mirabar
+Deseyna Majarra - human noble din Waterdeep
+
+Delegatia a fost vazuta ultima data la Billiard.
 
 \newpage
-
-
 
 \chapter{Jurnal}
 
 \section{Inceputuri}
-+=+ MAIN QUESTLINE +=+
-O delegatie din silvermoon catre waterdeep s-a pierdut pe undeva prin zona si Lords Alliance vrea sa afle de ce si ce si cum si etc. 
-Gheorghe, membru al Lords Alliance, a inceput sa investigheze ajutat de cei doi pulifrici din party-ul lui.
-
-
-Componenta echipei de delegati:
-Teresiel - moon elf din silverymoon
-Rhundorth - shield dwarf din mirabar
-Deseyna Majarra - human noble din waterdeep
-Delegatia a fost vazuta ultima data la Billiard.
 
 
 In han am auzit ca formatia pizdei aleia de m-a enervat (Windharrow) trebuie sa aiba o reprezentatie in Feathergale Spire (la este de Red Larch), asa ca prima oara o sa ii faco vizita. In Feathergal Spire stau
@@ -131,7 +121,7 @@ renuntat la Frost Arrow cu succes.
 Fragezim bine un Wave Priest si il facem prizonier. Aflam de la el ca sefii lui Jolliver sunt Greenjaw si Ushnara si ca vin din Templul Apei. Priest-ul nu ne poate spune nimic despre
 lupta din padure sau daca exista prizonieri.
 
-\section{P.C.R.}
+\chapter{Investigatie}
 \tikzstyle{abstract}=[rectangle, draw=black, rounded corners, fill=brown!90, drop shadow,text centered, anchor=north, text=white, text width=4cm, minimum width=2cm, minimum height=3cm]
 \tikzstyle{line}=[-, thick]
 \begin{tikzpicture}[scale=-1]
@@ -170,88 +160,52 @@ lupta din padure sau daca exista prizonieri.
 
 \chapter{Harti}
 
-\subchapter{Dessarin Valley}
-
-	\showmap{images/maps/dessarin-valley}
-
-\newpage
-
 \section{Red Larch}
 
 \showmap{images/maps/red-larch}
 
-\begin{verbatim}
-Red Larch
-18 - Mellikho Stoneworks, condusa de Albaeri Mellikho
-	aflam de:
-		- watchers - o legenda urbana
-		- o comoara ascunsa in Tricklerock Cave
+\begin{itemize}
 
-15 - Haaleyah - Croitor, Baie, 
-	aflam:
-		- au aparut banditi
-		- vremea e din ce in ce mai severa si mai impredictibila
-			- All Fate Shrine , un preot s-ar putea s stie mai mult
-		- ciobanii vad pe dealuri figuri care ii urmaresc cand merg cu oile (la est)
-		- la mineri le e frica de niste figuri negru cu masti de piatra in cariera. nu mai
-		merg noaptea in mina.
-
-8 - Bakery, Mangobarl Lorren un povestitor
-	aflam:
-		- reteta de bulci e awesome
-		- ciupercile sunt pregatite dupa o retea dwarf-easca
-
-6 - Fine Harness, Phaendra Chansyrl
-	aflam:
-		- a auzit de povestile cu banditi, watchers da' le ignora ca-i ocupata
-		- visul ei sa mearga in nord sa vaneze dragoni
-
-3 - Tavern, patronul Garlen Harlatur
-	
-2 - Inn The Swinging Sword, hangita e Kaylessa Irkel
-	aflam:
-		- Kaylessa: in Sumber Hills e mereu ceata chiar si cand e vreme frumoasa; vanturi
-		fierbinti si fulgere; crede ca e fel magic; cica unii din sat
-		ar sti despre Sumber Hills
-		- Kaylessa: se intampla ceva dubios in Lance Rock ; crede ca problemele
-		curente au legatura cu ce se intampla acolo si ne da 50G si cazare daca investigam
-
-1 - All Faiths Shrine
-	- Imdarr Relvaunder(Tempus worshiper, god of war, Upright flaming sword)
-	- Lymurra Auldark (Sune worshiper, goddess of love and beauty, Face of a beautiful red-haired woman)
-	- aflam:
-		- vremea e din ce mai grea, oamenii sunt pusi la incercare
+	\item \textbf{18} - Mellikho Stoneworks, condusa de Albaeri Mellikho de la care aflam:
+		\begin{itemize}
+			\item Watchers - o legenda urbana despre o societate secreta ?
+			\item Exista o comoara ascunsa in Tricklerock Cave
+		\end{itemize}
 		
-----------------
-18 - Mellikho Stoneworks, condusa de Albaeri Mellikho
-aflam de:
-watchers - o legenda urbana
-o comoara ascunsa in Tricklerock Cave
-15 - Haaleyah - Croitor, Baie, 
-aflam:
-au aparut banditi
-vremea e din ce in ce mai severa si mai impredictibila
-All Fate Shrine , un preot s-ar putea s stie mai mult
-ciobanii vad pe dealuri figuri care ii urmaresc cand merg cu oile (la est)
-la mineri le e frica de niste figuri negru cu masti de piatra in cariera. nu mai merg noaptea in mina.
-8 - Bakery, Mangobarl Lorren un povestitor
-aflam:
-reteta de bulci e awesome
-ciupercile sunt pregatite dupa o retea dwarf-easca
-6 - Fine Harness, Phaendra Chansyrl
-aflam:
-a auzit de povestile cu banditi, watchers da' le ignora ca-i ocupata
-visul ei sa mearga in nord sa vaneze dragoni
-3 - Tavern, patronul Garlen Harlatur
-2 - Inn The Swinging Sword, hangita e Kaylessa Irkel
-aflam:
-Kaylessa: in Sumber Hills e mereu ceata chiar si cand e vreme frumoasa; vanturi fierbinti si fulgere; crede ca e fel magic; cica unii din sat ar sti despre Sumber Hills
-Kaylessa: se intampla ceva dubios in Lance Rock ; crede ca problemele curente au legatura cu ce se intampla acolo si ne da 50G si cazare daca investigam
-1 - All Faiths Shrine
-Imdarr Relvaunder(Tempus worshiper, god of war, Upright flaming sword)
-Lymurra Auldark (Sune worshiper, goddess of love and beauty, Face of a beautiful red-haired woman)
-aflam:
-vremea e din ce mai grea, oamenii sunt pusi la incercare
+	\item \textbf{15} - Croitorie, baie. De la Haaleyah aflam: 
+		\begin{itemize}
+			\item Au aparut banditi
+			\item Vremea e din ce in ce mai severa si mai impredictibila si probabil vreun preot de la All Fate Shrine s-ar putea sa stie mai multe despre asta
+			\item Ciobanii vad pe dealuri figuri care ii urmaresc cand merg cu oile (la est). Or fi lupi ?
+			\item La mineri le e frica de niste figuri intunecate cu masti de piatra care apar in cariera. Nu mai merg noaptea in mina.
+		\end{itemize}
+		
+	\item \textbf{8} - Bulangerie. Lui Mangobarl Lorren ii place sa povesteasca. Aflam:
+		\begin{itemize}
+			\item Reteta de bulci cu branza e awesome
+			\item Ciupercile sunt pregatite dupa o retea dwarf-easca. Miam miam
+		\end{itemize}
+		
+	\item \textbf{6} - Selarie/Pielarie. De la Phaendra Chansyrl aflam:
+		\begin{itemize}
+			\item A auzit de povestile cu banditi si cu Watchers da' le ignora ca-i ocupata
+			\item Visul ei sa mearga in nord sa vaneze dragoni. Credeam ca e pragmatica dar e doar o ciudata.
+		\end{itemize}
+		
+	\item \textbf{3} Crasma. Patronul e Garlen Harlatur
+	
+	\item \textbf{2} Hanul The Swinging Sword. Hangita e Kaylessa Irkel care ne spune:
+		\begin{itemize}
+			\item In Sumber Hills e mereu ceata chiar si cand e vreme frumoasa cu vanturi fierbinti si fulgere. Crede ca e magie ``fel'' la mijloc. Cica unii din sat ar sti despre ce se intampla in Sumber Hills
+			\item Se intampla ceva dubios in Lance Rock. Crede ca problemele curente au legatura cu ce se intampla acolo si ne da 50G si cazare daca investigam
+		\end{itemize}
+		
+	\item \textbf{1} Capela All Faiths Shrine. Intalnim doi bisericosi - Imdarr Relvaunder(Tempus worshiper, zeul razboiului, Upright flaming sword) si  Lymurra Auldark (Sune worshiper, zeita dragostei si a frumusetii, Face of a beautiful red-haired woman). De la ei aflam ca vremea e din ce mai grea si oamenii sunt pusi la incercare
+	
+\end{itemize}
+
+FIXME
+\begin{verbatim}
 11 - Constable
 Iarburk Tuthmarillr
 aflam:
@@ -274,6 +228,7 @@ aflam:
 proprietarul este Endrith Vallivoe
 a auzit ca cineva a vazut un craniu prins intr-un copac cu o sageata neagra la 4 mile la est
 
+
 Pe sageta infipta in copac gasim un pergament pe care scrie : " I will have the last laugh!You'll be next Valklondar". Pergamentul e facut din piele umana. Craniul pare sa fie in copac de cateva saptamani. Lasam o nota cu o provocare peste 2 zile la Lance Rock. Ducem pielea la Tannery si pielarul gaseste un tatuaj pe ea - un triunghi cu un trident deasupra.
 
 
@@ -281,15 +236,6 @@ In dungeoun-ul din sat gasim daggerul raszus si un copil, fiul lui Hatherhand. T
 Aflam de Larak care i-a ajutat pe believerii sa inteleaga semenele de la dweleri.
 
 ------------------
-+=+ MAIN QUESTLINE +=+
-O delegatie din silvermoon catre waterdeep s-a pierdut pe undeva prin zona si Lords Alliance vrea sa afle de ce si ce si cum si etc. 
-Gheorghe, membru al Lords Alliance, a inceput sa investigheze ajutat de cei doi pulifrici din party-ul lui.
-
-Componenta echipei de delegati:
-Teresiel - moon elf din silverymoon
-Rhundorth - shield dwarf din mirabar
-Deseyna Majarra - human noble din waterdeep
-Delegatia a fost vazuta ultima data la Beliard.
 
 --Gheorghe quest--
 In han am auzit ca formatia pizdei aleia de m-a enervat (Windharrow) trebuie sa aiba o reprezentatie in Feathergale Spire (la este de Red Larch), asa ca prima oara o sa ii faco vizita. 
@@ -313,6 +259,12 @@ cultul apei are o baza in riverguard keep (sauruki)
 
 \newpage
 
+\section{Dessarin Valley}
+
+	\showmap{images/maps/dessarin-valley}
+
+\newpage
+
 \section{Feathergale Spire}
 
 \section{Scarlet Moon Hill}
@@ -324,6 +276,6 @@ cultul apei are o baza in riverguard keep (sauruki)
 \section{ToT}
 \begin{itemize}
 	\item https://lostandtaken.com
-	\item moo
 \end{itemize}
+
 \end{document}
