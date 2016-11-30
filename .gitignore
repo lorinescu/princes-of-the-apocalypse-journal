@@ -1,0 +1,10 @@
+*.aux
+*.log
+*.pdf
+*.gz
+*.toc
+*.gz(busy)
+*.out
+*.nav
+*.snm
+*.vrb
