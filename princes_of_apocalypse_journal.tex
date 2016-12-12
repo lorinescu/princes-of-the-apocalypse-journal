@@ -8,6 +8,7 @@
 \usepackage{tikz}
 \usetikzlibrary{positioning,shapes,shadows,arrows}
 \usepackage{wrapfig}
+\usepackage[most]{tcolorbox}
 
 \newcommand{\showmap}[1]{
 	\begin{center}
@@ -20,6 +21,37 @@
     {}
 }{
 	\end{list}
+}
+
+\newtcolorbox{rpg-paperbox}[2][]{
+		frame hidden,
+		boxrule=0pt,
+		breakable,
+		enhanced,
+		before skip=11pt plus 1pt,
+		toptitle=3mm,
+		boxsep=0.25ex,
+		left=8pt,
+		right=8pt,
+		fonttitle=\fontfamily{fosj}\selectfont\scshape\bfseries\color{black},
+		fontupper=\fontfamily{lmss}\selectfont,
+		title=#2,
+		arc=0mm,
+		parbox = false,
+		borderline north={1pt}{-0.5pt}{black},
+		borderline south={1pt}{-0.5pt}{black},
+		%colback=monstertandark,
+		%colframe=monstertandark,
+		%colbacktitle=monstertandark,
+		fuzzy shadow={0mm}{-3.5pt}{-0.5pt}{0.4mm}{black!60!white},
+		overlay={
+			\fill [fill=black] (frame.south west) -- ++(7pt,0) -- ++(0,-5pt) -- cycle;
+			\fill [fill=black] (frame.north west) -- ++(7pt,0) -- ++(0,5pt) -- cycle;
+			\fill [fill=black] (frame.north east) -- ++(-7pt,0) -- ++(0,5pt) -- cycle;
+			\fill [fill=black] (frame.south east) -- ++(-7pt,0) -- ++(0,-5pt) -- cycle;
+		},
+		after={\vspace{10pt plus 1pt}\noindent},
+		#1
 }
 
 
@@ -51,9 +83,11 @@ A fost odata ca niciodata...\\
 --Anonim
 \end{quote}
 
-O delegatie din Silvermoon catre Waterdeep s-a pierdut pe undeva prin zona si Lords Alliance vrea sa afle de ce si ce si cum si etc. 
-
-Gheorghe, membru fruntas al Lords Alliance, a inceput sa investigheze ajutat de sensibila Ella Menstu si inteleptul Caesar.
+\begin{rpg-paperbox}{Quest-ul Principal}
+	O delegatie din Silvermoon catre Waterdeep s-a pierdut pe undeva prin zona si Lords Alliance vrea sa afle de ce si ce si cum si etc. 
+\end{rpg-paperbox}
+\\
+Gheorghe, membru al Lords Alliance, a inceput sa investigheze ajutat de sensibila Ella Menstu si inteleptul Caesar.
 
 Componenta echipei de delegati:
 \begin{blue-gem-list}
@@ -61,7 +95,6 @@ Componenta echipei de delegati:
 	\item Rhundorth - shield dwarf din Mirabar
 	\item Deseyna Majarra - human noble din Waterdeep
 \end{blue-gem-list}
-
 
 Delegatia a fost vazuta ultima data la Beliard.
 
@@ -76,19 +109,48 @@ Delegatia a fost vazuta ultima data la Beliard.
     \includegraphics[width=0.25\textwidth]{images/maps/path-to-lance-rock}
 \end{wrapfigure}
 
-Suntem in Red Larch. Aflam de la un satean despre un craniu prins cu o sageta intr-un copac la Lance Rock. Decidem sa investigam. Pe sageata infipta in copac gasim un pergament pe care scrie : ``I will have the last laugh / You'll be next / Valklondar''. Pergamentul e facut din piele umana. Craniul pare sa fie in copac de cateva saptamani. Lasam o nota cu o provocare. Ducem pielea la Tannery si pielarul gaseste un tatuaj pe ea - un triunghi cu un trident deasupra.
+Suntem in Red Larch. Un oras nici prea mare, nici prea mic. Exact cat trebuie. 
+
+Ne plimbam prin centru sa cautam masa si casa, ce mai e de cumparat, d-astea
+turistice. Daca se poate mai ieftin ca na.
+
+Nu gasim nimic ieftin dar tipa care detine o mina de piatra ne spune ca ar 
+fi o comoara ascunsa intr-o pestera din apropiere. Mergem la pestera dar in 
+loc de comoara gasim o armata de tantari. II ucidem si ne prindem ca aia
+vroia sa faca o mina exploatare noua si nu putea din cauza tantarilor. 
+Mergem la ea cu nervi si eventual ne da niste aur pentru serviciile prestate.
+
+Nu prea mult dar suficient ca sa rezolvam cheltuielile curente cu cazarea 
+si proviziile de drum.
+
+Cum mai facem noi shopping prin oras un individ ne spune ca a vazut un 
+craniu prins cu o sageta intr-un copac la Lance Rock. Hopa! 
+
+Decidem sa investigam. 
+
+Pe sageata infipta in copac gasim un pergament pe care scrie : \textit{``I will 
+have the last laugh / You'll be next / Valklondar''}. Pergamentul e
+facut din piele umana. Craniul pare sa fie in copac de cateva saptamani. In 
+lipsa de idei lasam o nota cu o provocare. Ducem pielea la Tannery iar 
+pielarul gaseste un tatuaj pe ea - un triunghi cu un trident deasupra.
 \\
+Cat timp am fost plecati o caverna aflata chiar sub piata centrala 
+colapseaza. Ajutam un copchil cazut sa iasa si dupa aia ne bagam sa vedem 
+care-i treaba. In dungeon gasim pumnalul \textit{Raszus} si un copil (altul), 
+fiul lui Hatherhand. Tatal l-a trimis cu un mesaj important spre xyz. Aflam 
+de Larak care i-a ajutat pe Believers (societatea secreta din sat) sa 
+inteleaga semnele de la dweleri.
 
+Eventual descoasem toata povestea si se pare ca Larak era un agent al cultul 
+pamantului care folosea tot felul de trucuri ca sa-i pacaleasca pe sateni 
+si sa-i recruteze.
 
-Cat timp am fost plecati o caverna aflata chiar sub piata centrala colapseaza. Ajutam un copchil cazut sa iasa si dupa aia ne bagam sa vedem care-i treaba. In dungeon gasim daggerul Raszus si un copil (altul), fiul lui Hatherhand. Tatal l-a trimis cu un mesaj important spre xyz. Aflam de Larak care i-a ajutat pe believerii sa inteleaga semenele de la dweleri.
-
-Eventual descoasem toata povestea si se pare ca Larak era un agent al cultul pamantului care folosea tot felul de trucuri ca sa-i pacaleasca pe sateni si sa-i recruteze.
-
-Dupa ce se mai linistesc lucrurile prin sat mergem la crasma sa tragem una mica.
-Dupa mai multe mici Gheorghe aude o conversatie la o masa alatura, da cu pumnul in masa 
-proprie si spune:
-``Am auzit ca formatia pizdei aleia de m-a enervat (Windharrow) trebuie sa aiba o 
-reprezentatie in Feathergale Spire  asa ca prima oara o sa ii fac o vizita.''
+Dupa ce se mai linistesc lucrurile prin sat mergem la crasma sa tragem 
+una mica. Dupa mai multe mici Gheorghe aude o conversatie la o masa 
+alatura, da cu pumnul in masa proprie si spune:
+\textit{``Am auzit ca formatia pizdei aleia de m-a enervat (Windharrow) 
+trebuie sa aiba o reprezentatie in Feathergale Spire  asa ca prima oara o 
+sa ii fac o vizita.''}
 
 \begin{wrapfigure}{l}{0.25\textwidth}
     \centering
@@ -97,153 +159,243 @@ reprezentatie in Feathergale Spire  asa ca prima oara o sa ii fac o vizita.''
 
 Zis si facut.
 
-In Feathergale Spire stau Cavalerii Aerului, pasionati de calarit grifoni. Feathergale Spire se afla in in Sighing Valley, undeva la est de Red Larch.
+In Feathergale Spire stau Cavalerii Aerului, pasionati de calarit grifoni si de 
+vanatoare. Se afla in in Sighing Valley, undeva la est de Red Larch.
 
-Cand ajungem acolo gasim un turn inalt acoperit de marmura alba. In turn se poate intra
-printr-un drawbrige deschis peste o prapastie de 400 de picioare. Mai e o posibila intrare 
-la baza turnului dar o ignoram.
+Cand ajungem acolo gasim un turn inalt, dildonic, acoperit de marmura alba. 
+In turn se poate intra printr-un drawbrige deschis peste o prapastie de 
+400 de picioare. Mai e o intrare la baza turnului dar o ignoram.
 
-Reusim sa intram inauntru mintind ca suntem o formatie de trubaduri si tragem de
-limba pe cine putem.
+Reusim sa intram pretizand ca suntem o formatie de trubaduri. Inauntru tragem
+de limba pe cine putem.
 
-Cica Windharrow lucreaza un pic undercover si e de fapt mana dreapta
+\begin{rpg-paperbox}{Temple Of Howling Hatred}
+Cica Windharrow lucreaza undercover si e de fapt mana dreapta
 a printesei Aerului - Savra. Atm Windharrow s-a dus cu o misiune secreta 
 in Temple Of Howling Hatred.
+\end{rpg-paperbox}
 
-Printesa Savra este, undercover, cavaler al aerului. A fugit din Waterdeep unde sunt multi inamici ai Cultului Aerului.
+\begin{rpg-paperbox}{Printesa Savra}
+Printesa Savra este, la randul ei undercover, cavaler al aerului. A fugit 
+din Waterdeep unde sunt multi inamici ai Cultului Aerului.
+\end{rpg-paperbox}
 
 Cultul aerului este in razboi cu cultul apei, pamantului si focului.
 
-Ii ajutam pe cavaleri sa dea jos o manticora care tulbura ecosistemul din Sighing Valley si 
-astfel le castigam incredere, o cina copioasa si cazarea peste noapte.
+Ii ajutam pe cavaleri sa dea jos o manticora care tulbura ecosistemul din 
+Sighing Valley si astfel le castigam increderea, o cina copioasa si 
+cazarea peste noapte.
 
-Gheorghe are un duel amical cu un cavaler si castiga. Ella se imbata. Caesar se furiseaza
-noaptea si fura ceva haur din camera lui Thurl.
+Gheorghe are un duel amical cu un cavaler si castiga. Ella se imbata. 
+Caesar se furiseaza noaptea si fura ceva haur din camera lui Thurl.
 
+\begin{rpg-paperbox}{Sacred Stone Monastery}
 La plecare Thurl ne sugereaza sa investigam Sacred Stone Monastery.
+\end{rpg-paperbox}
 
-Ne intoarcem in Red Larch sa mai vindem , sa mai cumparam , arama-i veche, tabla-i veche.
-Cand ne plimbam de la un magazin la altul mai aflam tot felul de chestii de la cetateni.
+Revenim in Red Larch sa mai vindem , sa mai cumparam , arama-i veche, 
+tabla-i veche. Localnicii sunt deja familiarizati cu noi si un pic 
+mai sociabili. Cand ne plimbam de la un magazin la altul mai aflam 
+tot felul de chestii de la tot felul de bagatori in seama.
 
-Un individ shady din Womford a facut rost de mai multe carti dwarfice. Cartea
-cumparata de Vallivoe din Red Larch contine istoria Waterdeep-ului si este veche 
-de 500 de ani.
+\begin{rpg-paperbox}{Cartile Dwarfice}
+Un individ shady din Wombford a facut rost de mai multe carti dwarfice. 
+Cartea cumparata de Vallivoe din Red Larch contine istoria Waterdeep-ului 
+si este veche de 500 de ani.
+\end{rpg-paperbox}
 
-De la un alt individ dubios cu caruta stricata si marcata cu un Castron aflam de intalnirea 
-druizilor la Scarlet Moon Hall.
+De la un alt individ dubios cu caruta stricata si marcata cu un Castron
+aflam de intalnirea druizilor la Scarlet Moon Hall.
 
-Gheorghe isi ia armura noua si o poarta cu mandrie.Caesar sta trist in fata unui pahar de tarie in  care tot pune cuburi de gheata generate cu crituri de Frozen Arrow.
+Gheorghe isi ia armura noua si o poarta cu mandrie.Caesar sta trist in 
+fata unui pahar de tarie in  care tot pune cuburi de gheata generate cu 
+crituri de Frozen Arrow.
 
-Ella plateste unui sexomancer de la han 100g si isi schimba sexul, numele si poza. Devine Axxl Menstu.
+Ella plateste unui sexomancer de la han 100g si isi schimba sexul, numele 
+si poza. Devine Axxl Menstu.
 
+Dupa evenimentele din Feathergale decidem sa investigam disparitia diplomatilor 
+la Beliard  via Scarlet Moon Hall. E in drum oricum. 
 
-Dupa evenimentele din Feathergale decidem sa investigam disparitia diplomatilor la Beliard 
-via Scarlet Moon Hall. E in drum oricum. 
+Cand ajungem stam de vorba cu niste druizi un pic betivani de la care aflam 
+ca a-II-a zi urmeaza sa aiba loc un ritual al fertilitatii. Un ritual de 
+sa fie bine sa nu fie rau. 
 
-Cand ajungem stam de vorba cu niste druizi un
-pic betivani de la care aflam ca a-II-a zi urmeaza sa aiba loc un ritual al fertilitatii. Un ritual
-de sa fie bine sa nu fie rau. 
+Urcam un pic pe deal si dam de o tabara mica cu cativa druizi unde-i priponit 
+si un urs. Dupa un pic de conversatie despre vreme si taxe suntem atacati. 
+Druizii sunt de fapt Flame Priests. Reusim sa-i batem.
 
-Urcam un pic pe deal si dam de o tabara mica cu cativa druizi unde-i priponit si un urs. Dupa un 
-pic de conversatie despre vreme si taxe suntem atacati. Druizii sunt de fapt Flame Priests. Reusim
-sa-i batem.
-
-Mai departe dam de o tabara cu doi tipi urat mirositori si anti-sociali. Nu reusim sa stabilim
-un contact social si continuam la a-IV-a tabara. Se repeta patania cu Flame Priest. Din fericire
-ne ajuta niste druizi ai izvorului apei limpezi care erau prin zona si cei doi tipi care de fapt
-sunt varcolaci. Cu greu reusim sa-i invingem. 
+Mai departe dam de o tabara cu doi tipi urat mirositori si anti-sociali. Nu 
+reusim sa stabilim un raport social si continuam la a-IV-a tabara. Se repeta 
+patania cu Flame Priest. Din fericire ne ajuta niste druizi ai izvorului apei 
+limpezi care erau prin zona si cei doi tipi care de fapt sunt varcolaci. Cu 
+greu reusim sa-i invingem. 
 
 Deja cam oricine poarta gluga e suspect. Aparent, toti de pe deal au o agenda.
 
-Ma rog, continuam la urmatoarea tabara unde dam de cativa ``druizi'' si de un tip pe nume Sauruki. 
-Se pare ca Sauruki e un cultist al apei. Ne invata fara sa vrea mudra cultului. Iarasi ne batem,
-iarasi castigam.
+Ma rog, continuam la urmatoarea tabara unde dam de cativa ``druizi'' si de un 
+tip pe nume Sauruki.  Se pare ca Sauruki e un cultist al apei. Ne invata fara 
+sa vrea mudra cultului. Iarasi ne batem, iarasi castigam.
 
-La tabara estica dam peste niste bugbears nespalati si niste druizi morti. Relativ
-repede, in tabara raman niste druizi morti si niste bugbears nespalati morti.
+La tabara estica dam peste niste bugbears nespalati si niste druizi morti. 
+Relativ repede, in tabara raman niste druizi morti si niste bugbears nespalati 
+morti.
 
-Ne intalnim cu \textbf{Lothar}, un cleric-fost-razboinic care a pornit pe calea spalarii pacatelor. Decide ca obiectivele lui coincid cu ale noastre si da join la party.
+Ne intalnim cu \textbf{Lothar}, un cleric-fost-razboinic care a pornit pe 
+calea spalarii pacatelor. Decide ca obiectivele lui coincid cu ale noastre 
+si da join la party.
 
-In sfarsit ajungem in varful dealului. Din niste corturi imprumutam cape de Moon Hall druids.
-Absolut accidental invocam un Flame Elemental din momaia care ardea molcom. Din motive care nu le
-stim dar suspectam ca au legatura cu imbracamintea, elementalul ne ignora si se duce la vale. Luam
-xp gras desi nu meritam.
+In sfarsit ajungem in varful dealului. Din niste corturi imprumutam cape 
+de Moon Hall druids. Absolut accidental invocam un Flame Elemental din 
+momaia care ardea molcom. Din motive care nu le stim dar suspectam ca 
+au legatura cu imbracamintea, elementalul ne ignora si se duce la vale.
+Luam xp gras desi nu meritam.
 
-Cat incercam sa intelegem ce s-a intamplat apare o patrula. Un caine al focului ne miroase si ne
-luam wipe. In acest moment se intampla un reload. \textit{Doar} un caine ne miroase si reusim 
-sa-l omoram. Mars sarla in focul care te-a nascut!
+Cat incercam sa intelegem ce s-a intamplat apare o patrula. Un caine al 
+focului ne miroase si ne luam wipe. In acest moment se intampla un 
+reload. \textit{Doar} un caine ne miroase si reusim sa-l omoram. Mars 
+sarla in focul care te-a nascut!
 
-Ne urcam in turnul din varful dealului lasand cateva cadavre de garzi in urma. Mai aruncam 
-cativa baieti de la inaltime si eventual ne intalnim cu Efizar, seful local. Cu o incredere in sine deosebita si niste pretentii absurde ne oftica si ii dam. Din fericire are un lapsus si uita incantantia
-pentru Wall of Fire. Reusim sa-l luam prizonier si sa-l interogam. Aflam despre niste diplomati
-care au fost ingropati la Shallow Graves si despre intrarea secreta de la baza turnului in 
-Fireland/Lumea Focului.
+Ne urcam in turnul din varful dealului lasand cateva cadavre de garzi in 
+urma. Mai aruncam cativa baieti de la inaltime si eventual ne intalnim cu 
+\textit{Efizar}, seful local. Cu o incredere in sine deosebita si niste 
+pretentii absurde ne oftica si ii dam. Din fericire are un lapsus si uita 
+incantantia pentru Wall of Fire. Reusim sa-l luam prizonier si sa-l interogam.
+Aflam despre niste diplomati care au fost ingropati la Shallow Graves si 
+ despre intrarea secreta de la baza turnului in Fireland/Lumea Focului.
 
 \section{2016-11-20}
 
 De la Scarlet Moon Hall ne intoarcem in Red Larch. Cumparam
-chestii. Larmon Greenboot, un cioban din sat, ne-a spus ca au aparut niste 
+chestii. 
+
+\begin{rpg-paperbox}{Shallow Graves}
+	Larmon Greenboot, un cioban din sat, ne-a spus ca au aparut niste 
 morminte noi cu cateva zile in urma pe unde paste el oile.
+\end{rpg-paperbox}
 
 \begin{blue-gem-list}
 	\item mormantul 1: dwarf in haine de artizan, blacksmith
-	\item mormantul 2: female human warrior, un simbol cu o secure rosie (simbolul armatei din mirabar)
-	\item mormantul 3: male human warrior, pelerina neagra si o armura din piatra
+	\item mormantul 2: female human warrior, un simbol cu o secure rosie 
+	(simbolul armatei din mirabar)
+	\item mormantul 3: male human warrior, pelerina neagra si o armura din 
+	piatra
 	\item mormantul 4: male human, roba alba, pene negre pe umeri
 \end{blue-gem-list}
 
-Gasim un tattered gray cloak - indiciu.
+Gasim un \textbf{tattered gray cloak} indiciu.
 
-In delegatie sunt aproximativ 12 oameni.
-
-Continuam spre drumul de la est si intr-o poienita gasim urmele unei batalii:
+Continuam pe  drumul de la est si intr-o poienita gasim urmele unei batalii:
 \begin{blue-gem-list}
 	\item 2 morminte de piatra
 	\item 8 bugbears cu armura neagra care au un simbol un triunghi
-	\item 1 female human cu masca aurie sub forma unui gargoyle si roba are un simbol un triunghi
+	\item 1 female human cu masca aurie sub forma unui gargoyle si roba are 
+	un simbol un triunghi
 	\item ne dam seama ca s-a folosit powerful earth magic
 \end{blue-gem-list}
 
-Conform urmelor un grup de 30 bugbears/oameni au plecat catre rau (vest). La rau sunt 
-urme de barci care au fost lansate la apa. Probabil toata escorta delegatilor a 
-fost omorata aici.
+Luam \textbf{masca aurie} - indiciu.
+
+Conform urmelor, un grup de 30 bugbears/oameni au plecat catre rau (vest). 
+La rau sunt  urme de barci care au fost lansate la apa. Probabil toata escorta 
+delegatilor a fost omorata aici.
 
 Coboram la sud pe mal si gasim o tabara cu water priests si mercenari. Tragem
-cu urechea si auzim ca seful water priests se numeste Jolliver Grimjaw.
+cu urechea si auzim ca seful water priests se numeste \textit{Jolliver Grimjaw}.
 Ne batem si ii omoram.
 
-Continuam cu barca spre Riverguard.
+Dupa ce ne sfatuim continuam cu barca spre Riverguard. E posibil ca atacatorii sa
+fi mers acolo.
 
-Rivergard are zidurile chiar pe malul raului. Se poate intra dinspre uscat via gatehouse sau pe apa printr-un port unde sunt ancorate niste barci.
+Rivergard are zidurile chiar pe malul raului. Se poate intra dinspre uscat via 
+gatehouse sau pe apa printr-un port unde sunt ancorate niste barci.
 Fortareata este in reparatie - acoperis nou. Un banner alb cu o manusa de 
 armura (gauntlet) albastra.
+
 Ajungem cu barca pe malul opus al raului, nevazuti. 
 
 \section{2016-11-27}
 
-In Riverguard Keep ne intamplina seful Reashing care ne trimite la Jolliver.
-Desi suntem calificati, Jolliver nu vrea sa ne angajeze ca mercenari si plecam 
-huiduind. Pare ca am pierdut interviul cand Axxel a pomenit de colaborarea artistica
-cu Windharrow.
-Noaptea ne strecuram in  castel si incepem sa asasinam garzile cu dibacie. Caesar a
-renuntat la Frost Arrow cu succes.
+In Riverguard Keep ne intamplina locotenentul Reashing care ne trimite la Jolliver.
+Desi suntem calificati, Jolliver nu vrea sa ne angajeze ca mercenari si 
+plecam  huiduind. 
+
+Pare ca am pierdut interviul cand Axxel a pomenit de colaborarea 
+artistica cu Windharrow.
+
+Noaptea ne strecuram in  castel si incepem sa asasinam garzile cu dibacie. Caesar 
+a renuntat la Frost Arrow cu succes.
+
 Fragezim bine un Wave Priest si il facem prizonier. Aflam de la el ca sefii lui Jolliver sunt Greenjaw si Ushnara si ca vin din Templul Apei. Priest-ul nu ne poate spune nimic despre lupta din padure sau daca exista prizonieri.
 
+\begin{rpg-paperbox}{Vaporul}
 Gheorghe trage cu urechea la o camera de garda si aude ceva despre un vapor care
 vine sau pleaca sau pleaca sau vine.
+\end{rpg-paperbox}
 
 \section{2016-12-04}
 
-A progresat nitel asaltul asupra Riverguard Keep, Caesar si-a gasit un companion (temporar, sadly) si Gheorghe a inceput sa-si dea seama ca desi e util sa fii foarte scary in timpul interogatoriului, ajuta si sa pui intrebarile corecte.
+A progresat nitel asaltul asupra Riverguard Keep, Caesar si-a gasit un companion 
+(temporar, sadly) si Gheorghe a inceput sa-si dea seama ca desi e util sa fii 
+foarte scary in timpul interogatoriului, ajuta si sa pui intrebarile corecte.
 
-Incet incet progresam prin baraca, biserica si in sfarsit ajungem la corabia din port.
-Acolo o intalnim pe Shaolar Quanderil care are pregatita o ambuscada. Ambuscadorii mor. O interogam pe Shaolar si aflam ca atacul asupra delegatiei a fost facut de cultul pamantului. Cica si cultul apei pregatise ceva similar dar nu au reusit sa-si intinda capcana. Ordinele au venit de la templul apei (Temple of the Crashing Wave), mai exact de la Gar Shatterkeel.
+Incet, incet progresam prin baraca, biserica si in sfarsit ajungem la corabia din 
+port. Acolo o intalnim pe \textit{Shaolar Quanderil} care are pregatita o ambuscada.
+Ambuscadorii mor. O interogam pe Shaolar si aflam ca atacul asupra delegatiei a fost 
+facut de cultul pamantului. Cica si cultul apei pregatise ceva similar dar nu au reusit 
+sa-si intinda capcana.
+
+\begin{rpg-paperbox}{Temple of the Crashing Wave}
+Ordinele au venit de la templul apei (Temple of the Crashing Wave), mai exact de la 
+Gar Shatterkeel.
+\end{rpg-paperbox}
+
 Cultul apei era pe urmele noastre dupa ce s-a aflat ce am facut la Scarlet Moon Hall.
 
-Dupa ce o mai interogam un pic, Shaolar  ne spune ca a ajutat niste contrabandisti sa treaca apa la Wombford. O parte din plata primit sunt niste carti vechi, dwarfice.
+Dupa ce o mai interogam un pic, Shaolar  ne spune ca a ajutat niste contrabandisti 
+sa treaca apa la Wombford. O parte din plata primit sunt niste \textbf{carti 
+vechi, dwarfice}.
+
 Hmm...
 
-Also vaporul e plin cu bunuri de larg consum - branza, bere, blanuri. In magazia din fortareata este un stash de armuri, scuturi si arme. 1+1 = gold.
+Corabia lui Shaolar e plina cu bunuri de larg consum - branza, bere, blanuri. In
+magazia din fortareata este un stash de armuri, scuturi si arme. 1+1 = gold.
+
+\section{2016-12-12}
+
+Gheorghe asculta la usa turnului de la nord-est si aude o conversatie dintre niste 
+bugbears: ``Cred ca eu am sa atac una din garzi zilele astea. Mrneau!''. Da buzna 
+in camera si ii ataca fara mila. Axxel incearca sa opreasca batalia dar, dupa 
+un fire bolt epic a lu' Caesar, ostilitatile nu mai pot fi oprite cu diplomatie. II 
+omoram. Pareau mercenari. Nu o sa stim niciodata.
+
+Continuam spre cladirea centrala. La intrare ii intalnim pe Greenjaw si Ushnara, 
+mesagerii de la Templul Apei. Ii omoram fara mila.
+
+In bucatarie gasim gasim niste tarani rapiti din Wombford. Vreo 3 din ei cica ar 
+fi golani care au venit de buna voie.
+
+Promitem taranilor ne-golani ca o sa-i reptraiem daca o sa:
+	\begin{blue-gem-list}
+		\item ii pazeasca pe taranii golani cat ne uitam noi prin keep
+		\item ne ajute sa incarcam corabia cu bunuri
+		\item ne arate unde este Wombford
+		\item fie ghizi in Wombford
+		\item ceva lui Gheorghe
+	\end{blue-gem-list}
+
+Mai cotrobaim pe acolo si prin lobby gasim niste rapoarte de la mercenarii
+angajati de Jolliver(?):
+	\begin{blue-gem-list}
+		\item o caruta de faina langa ``B''. 
+		\item 40 silver pieces luate de la un calator de langa ``W''
+		\item traficul de caravane din Red Larch
+		\item o banda de troublemakers circula prin zona (noi)
+	\end{blue-gem-list}
+
+In spatele unei biblioteci din camera lui Ushnara gasim o camera secreta un 
+doarme Jolliver. Il spargem destul de greu pe Jolliver, wereboar-ul. Se pare ca o sa
+trebuiasca sa ne ungem armele cu ceva argint. 
 
 \newpage
 
@@ -282,13 +434,13 @@ Also vaporul e plin cu bunuri de larg consum - branza, bere, blanuri. In magazia
     \draw[line] (Windharrow.south) -- (TempleOfTheHowlingHate.north);
 \end{tikzpicture}
 
-\tikzstyle{abstract}=[rectangle, draw=black, rounded corners, fill=brown!90, drop shadow,text centered, anchor=north, text=white, text width=4cm, minimum width=2cm, minimum height=3cm]
+\tikzstyle{abstract}=[rectangle, draw=black, rounded corners, fill=blue!90, drop shadow,text centered, anchor=north, text=white, text width=4cm, minimum width=2cm, minimum height=3cm]
 \tikzstyle{line}=[-, thick]
 \begin{tikzpicture}[scale=-1]
 	\node (CultulApei) [abstract, circle, text width=3cm]{
 	     \textbf{Cultul Apei}
     };
-    \node (Riverguard) [abstract, below left=of CultulApei]{
+    \node (Riverguard) [abstract, below=of CultulApei]{
 	     \textbf{Riverguard}
     };
     \node (Sauruki) [abstract, below left=of Riverguard] {
@@ -297,10 +449,18 @@ Also vaporul e plin cu bunuri de larg consum - branza, bere, blanuri. In magazia
      \node (JolliverGrimjaw) [abstract, below=of Riverguard] {
     	\textbf{Jolliver Grimjaw (seful Riverguard)}
     };
+    \node (TempleOfCrashingWave) [abstract, below right=of JolliverGrimjaw]{
+	     \textbf{Temple Of Crashing Wave}
+    };
+    \node (GarShatterkeel) [abstract, below=of TempleOfCrashingWave]{
+	     \textbf{Gar Shatterkeel (sef pe la templu?)}
+    };
     
     \draw[line] (CultulApei.south) -- (Riverguard.north);
     \draw[line] (Riverguard.south) -- (Sauruki.north);
     \draw[line] (Riverguard.south) -- (JolliverGrimjaw.north);
+    \draw[line] (Riverguard.south) -- (TempleOfCrashingWave.north);
+    \draw[line] (TempleOfCrashingWave.south) -- (GarShatterkeel);
 \end{tikzpicture}
 
 \tikzstyle{abstract}=[rectangle, draw=black, rounded corners, fill=brown!90, drop shadow,text centered, anchor=north, text=white, text width=4cm, minimum width=2cm, minimum height=3cm]
